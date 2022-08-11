@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/BookOfTheDay_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="Read of the day"
+        android:textSize="24sp" />
+
+    <include
+        android:id="@+id/bookOfTheDay_Card"
+        layout="@layout/book_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BookOfTheDay_Label"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/recommendation_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookOfTheDay_Card"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="Recommended for you"
+        android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommendationList_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recommendation_Label"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBook_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/blue_primary"
+        android:elevation="25dp"
+        android:foreground="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/red_accent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/settings_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@id/addBook_Button"
+        android:background="@color/blue_primary"
+        android:elevation="25dp"
+        android:foreground="@drawable/ic_baseline_settings_12"
+        app:backgroundTint="@color/red_accent" />
+
+    <ImageView
+        android:id="@+id/logo_Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_05x" />
+
+    <ProgressBar
+        android:id="@+id/splashLoader_ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_Image"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

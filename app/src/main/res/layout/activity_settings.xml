@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+
+    <TextView
+        android:id="@+id/Settings_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="Settings"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/Account_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Settings_Label"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/segoeuiz"
+        android:text="Account"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/AccountInfo_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Account_Label"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/segoeui"
+        android:text="@string/AccountInfoText"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/delete_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AccountInfo_Label"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/red_accent"
+        android:padding="4dp"
+        android:text="DELETE DATA" />
+
+    <TextView
+        android:id="@+id/Preferences_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delete_Button"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/segoeuii"
+        android:text="Personal Preferences"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/ReadingGoal_Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Preferences_Label"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/segoeuiz"
+        android:text="Set reading goal"
+        android:textSize="18sp" />
+
+    <TimePicker
+        android:id="@+id/timePicker_DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ReadingGoal_Label"
+        android:layout_centerHorizontal="true"
+        android:hapticFeedbackEnabled="true"
+        android:timePickerMode="spinner" />
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookInfoActivity">
+
+    <ImageView
+        android:id="@+id/bookThumbsInfo_Image"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:background="@drawable/ic_launcher_background"
+        android:backgroundTint="#0000df"
+        android:backgroundTintMode="screen"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_05x" />
+
+    <include
+        android:id="@+id/bookOfTheDayInfo_Card"
+        layout="@layout/book_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookThumbsInfo_Image"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <ImageButton
+        android:id="@+id/addComment_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bookOfTheDayInfo_Card"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/ic_baseline_add_box_24"
+        android:backgroundTint="@color/red_accent" />
+
+    <TextView
+        android:id="@+id/comments_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookOfTheDayInfo_Card"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/segoeuib"
+        android:text="Comments"
+        android:textSize="24sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentList_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/comments_Label"
+        android:layout_margin="4dp" />
+
+
+</RelativeLayout>
